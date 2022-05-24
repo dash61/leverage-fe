@@ -2,37 +2,124 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.grid-main {
+  background-color: darkblue;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.typo-divs {
+  margin: 5px;
+  padding: 0;
+  background-color: lightskyblue;
+  border-radius: 5px;
+  min-width: 300px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contacts-on {
+  position: relative;
+}
+
+.contacts-off {
+  position: relative;
+}
+
+.contacts-off:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  background: darkblue;
+}
+
+.hide {
+	display: none;
+}
+
+.valid {
+	color: limegreen;
+	margin-left: 0.25rem;
+  display: inline;
+  vertical-align: middle;
+}
+
+.invalid {
+	color: red;
+	margin-left: 0.25rem;
+  display: inline;
+  vertical-align: middle;
+}
+
+.errmsg {
+	background-color: lightpink;
+	color: firebrick;
+	font-weight: bold;
+	padding: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.instructions {
+	font-size: 0.75rem;
+	border-radius: 0.5rem;
+	background: #000;
+	color: #fff;
+	padding: 0.25rem;
+	position: relative;
+	bottom: -10px;
+}
+
+.instructions > svg {
+	margin-right: 0.25rem;
+}
+
+.line {
+	display: inline-block;
+  margin-left: 10px;
+}
+
+.sign-in {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.field label {
+  display: inline-block;
+  width: 135px;
+  text-align: right;
+  margin-right: 3px;
+}
+
+.field .error {
+  color: red;
+  margin-left: 3px;
+  font-size: 0.8em;
+}
+
+.input-field {
+  height: 40px;
+  width: 200px;
+  border: "1px solid black";
+  border-radius: 5px;
+  outline: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc;
+  padding: 0;
+  padding-left: 5px;
+  font-size: 1rem;
 }
